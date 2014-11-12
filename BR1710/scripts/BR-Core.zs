@@ -1,4 +1,5 @@
-
+import minetweaker.item.IItemStack;
+import mods.railcraft.RockCrusher;
 
 // Ore Dictonary Addition
 
@@ -58,6 +59,25 @@ val dirt = <minecraft:dirt>;
 val dust = <gregtech:gt.metaitem.01:2500>;
 val tinyPileDarkAshes = <gregtech:gt.metaitem.01:816>;
 
+// Gregtech Crushed Ores
+val crushedGTIron		= <gregtech:gt.metaitem.01:5032>;
+val crushedGTGold		= <gregtech:gt.metaitem.01:5086>;
+val crushedGTCassiterite	= <gregtech:gt.metaitem.01:5824>;
+val crushedGTTetrahedrite	= <gregtech:gt.metaitem.01:5840>;
+val crushedGTBauxite		= <gregtech:gt.metaitem.01:5822>;
+val crushedGTUranium		= <gregtech:gt.metaitem.01:5098>;
+val crushedGTRuby		= <gregtech:gt.metaitem.01:5502>;
+val crushedGTLead		= <gregtech:gt.metaitem.01:5089>;
+val crushedGTSilver		= <gregtech:gt.metaitem.01:5054>;
+val crushedGTLapis		= <gregtech:gt.metaitem.01:5526>;
+val crushedGTRedstone		= <gregtech:gt.metaitem.01:5810>;
+val crushedGTDiamond 		= <gregtech:gt.metaitem.01:5500>;
+val crushedGTIridium		= <gregtech:gt.metaitem.01:5084>;
+val crushedGTOsmium		= <gregtech:gt.metaitem.01:5083>;
+val crushedGTPlatinum		= <gregtech:gt.metaitem.01:5085>;
+val crushedGTNaquadah		= <gregtech:gt.metaitem.01:5324>;
+val crushedGTNaquadria		= <gregtech:gt.metaitem.01:5327>;
+
 // Nugget to ingot	
 recipes.addShaped(enderingot, [
 	[endernugget, endernugget, endernugget],
@@ -67,6 +87,9 @@ recipes.addShaped(enderingot, [
 // furnace do stuff
 furnace.addRecipe(<gendustry:HoneyDrop:11>, marsmutagen, 2.0);
 furnace.addRecipe(<minecraft:glowstone_dust>, moonglowstone, 2.0);
+// Mars and Moon diamond smelting recipe was missing
+furnace.addRecipe(<minecraft:diamond>, moondiamond, 2.0);
+furnace.addRecipe(<minecraft:diamond>, marsdiamond, 2.0);
 
 // Dust to diamond
 recipes.addShapeless(<minecraft:diamond>, [dust, dust, dust]);
@@ -102,4 +125,37 @@ naquadah.add(marsnaquadah);
 osmium.add(marsosmium);
 platinum.add(marsplatinum);
 
+// Adding Moon and Martian ores to the Railcraft Rock Crusher
 
+// RockCrusher Recipes
+// InputStack, matchDamage, matchNBT, OutputStacks, Chance
+
+// This recipe would add both stone dust and crushed ores at the normal rate 
+// RockCrusher.addRecipe(mooniron, false, false, [<gregtech:gt.metaitem.01:5032> * 2, <gregtech:gt.metaitem.01:2299>], [1.0, 0.1]);
+RockCrusher.addRecipe(mooniron, false, false, [crushedGTIron * 2], [1.0]);
+RockCrusher.addRecipe(marsiron, false, false, [crushedGTIron * 2], [1.0]);
+RockCrusher.addRecipe(marsgold, false, false, [crushedGTGold * 2], [1.0]);
+RockCrusher.addRecipe(mooncassiterite, false, false, [crushedGTCassiterite * 4], [1.0]);
+RockCrusher.addRecipe(marscassiterite, false, false, [crushedGTCassiterite * 4], [1.0]);
+RockCrusher.addRecipe(moontetrahedrite, false, false, [crushedGTTetrahedrite * 2], [1.0]);
+RockCrusher.addRecipe(marstetrahedrite, false, false, [crushedGTTetrahedrite * 2], [1.0]);
+RockCrusher.addRecipe(moonbauxite, false, false, [crushedGTBauxite * 2], [1.0]);
+RockCrusher.addRecipe(marsbauxite, false, false, [crushedGTBauxite * 2], [1.0]);
+RockCrusher.addRecipe(marsuranium, false, false, [crushedGTUranium * 2], [1.0]);
+RockCrusher.addRecipe(moonruby, false, false, [crushedGTRuby * 2], [1.0]);
+RockCrusher.addRecipe(marsruby, false, false, [crushedGTRuby * 2], [1.0]);
+RockCrusher.addRecipe(moonlead, false, false, [crushedGTLead * 2], [1.0]);
+RockCrusher.addRecipe(marslead, false, false, [crushedGTLead * 2], [1.0]);
+RockCrusher.addRecipe(moonsilver, false, false, [crushedGTSilver * 2], [1.0]);
+RockCrusher.addRecipe(marssilver, false, false, [crushedGTSilver * 2], [1.0]);
+RockCrusher.addRecipe(moonlapis, false, false, [crushedGTLapis * 2], [1.0]);
+RockCrusher.addRecipe(marslapis, false, false, [crushedGTLapis * 2], [1.0]);
+RockCrusher.addRecipe(moonredstone, false, false, [crushedGTRedstone * 2], [1.0]);
+RockCrusher.addRecipe(marsredstone, false, false, [crushedGTRedstone * 2], [1.0]);
+RockCrusher.addRecipe(moondiamond, false, false, [crushedGTDiamond * 2], [1.0]);
+RockCrusher.addRecipe(marsdiamond, false, false, [crushedGTDiamond * 2], [1.0]);
+RockCrusher.addRecipe(marsiridium, false, false, [crushedGTIridium * 2], [1.0]);
+RockCrusher.addRecipe(marsosmium, false, false, [crushedGTOsmium * 2], [1.0]);
+RockCrusher.addRecipe(marsplatinum, false, false, [crushedGTPlatinum * 2], [1.0]);
+RockCrusher.addRecipe(marsnaquadah, false, false, [crushedGTNaquadah * 2], [1.0]);
+RockCrusher.addRecipe(marsnaquadria, false, false, [crushedGTNaquadria * 2], [1.0]);
