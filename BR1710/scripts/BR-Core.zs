@@ -1,4 +1,4 @@
-import mods.nei.NEI;
+
 
 // Ore Dictonary Addition
 
@@ -53,29 +53,23 @@ val marsplatinum = <beyondrealitycore:customBlock_21>;
 val platinum = <ore:orePlatinum>;
 val endernugget = <EnderIO:itemMaterial:4>;
 val enderingot = <EnderIO:itemAlloy:2>;
-val itemfix = <beyondrealitycore:BRC:dimGuardKiller>;
 val stick = <minecraft:stick>;
 val dirt = <minecraft:dirt>;
 val dust = <gregtech:gt.metaitem.01:2500>;
 val tinyPileDarkAshes = <gregtech:gt.metaitem.01:816>;
 
-// Nugget to ingot
-NEI.addEntry(enderingot.withTag({display: {Lore: ["Beyond Reality,", "Additional Recipe"]}}));		
+// Nugget to ingot	
 recipes.addShaped(enderingot, [
 	[endernugget, endernugget, endernugget],
 	[endernugget, endernugget, endernugget],
-	[endernugget, endernugget, endernugget]]);
-	
-// Item Fixer
-NEI.addEntry(itemfix.withTag({display: {Lore: ["Beyond Reality,", "Additional Recipe"]}}));	
-recipes.addShaped(itemfix, [
-	[null, dirt, null],
-	[dirt, stick, dirt],
-	[null, dirt, null]]);	
+	[endernugget, endernugget, endernugget]]);		
 
 // furnace do stuff
 furnace.addRecipe(<gendustry:HoneyDrop:11>, marsmutagen, 2.0);
 furnace.addRecipe(<minecraft:glowstone_dust>, moonglowstone, 2.0);
+
+furnace.addRecipe(<minecraft:diamond>, moondiamond, 2.0);
+furnace.addRecipe(<minecraft:diamond>, marsdiamond, 2.0);
 
 // Dust to diamond
 recipes.addShapeless(<minecraft:diamond>, [dust, dust, dust]);
