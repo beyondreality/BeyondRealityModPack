@@ -288,14 +288,15 @@
             "file": "cauldron-1.7.10-1.1236.05.210-server.jar",
             "md5": "e88d897ae5bb3afd0f86e04edbde5af1",
             "download": "server",
-            "website": "http://minecraft.maeyanie.com/cauldron/",
+            "website": "http://cauldron.minecraftforge.net/",
+            "donation": "http://www.patreon.com/bloodmc",
             "colour": "yellow",
             "warning": "spice",
             "type": "forge",
             "client": false,
             "serverOptional": true,
             "recommended": false,
-            "description": "Minecraft Cauldron"
+            "description": "Cauldron is a combination of Minecraft Forge and the Spigot project to allow you to run a Forge server with Bukkit plugins installed."
         },
         {
             "name": "Applied Energistics 2",

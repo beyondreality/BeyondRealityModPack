@@ -393,8 +393,9 @@
             type="forge" 
             warning="spice"
             colour="yellow"
-            website="http://minecraft.maeyanie.com/cauldron/" 
-            description="Minecraft Cauldron" 
+            website="http://cauldron.minecraftforge.net/" 
+            donation="http://www.patreon.com/bloodmc"
+            description="Cauldron is a combination of Minecraft Forge and the Spigot project to allow you to run a Forge server with Bukkit plugins installed." 
         />
         
         
