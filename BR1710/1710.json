@@ -1184,6 +1184,29 @@
             "description": "MineTweaker is a mod that enables players and server admins to alter recipes."
         },
         {
+            "name": "GTTweaker",
+            "version": "0.7.2",
+            "url": "packs/BeyondReality/files/1710mods/GTTweaker-1.7.10-0.7.2.jar",
+            "file": "GTTweaker-1.7.10-0.7.2.jar",
+            "download": "server",
+            "md5": "e2e0c450d216267362bd83ccf466bd0c",
+            "filesize": 75559,
+            "website": "http://forum.industrial-craft.net/index.php?page=Thread&threadID=11353",
+            "authors": [
+                "DreamMasterXXL"
+            ],
+            "colour": "babyblue",
+            "type": "mods",
+            "client": true,
+            "optional": false,
+            "server": true,
+            "selected": false,
+            "recommended": true,
+            "hidden": false,
+            "library": false,
+            "description": "A Minetweaker AddOn for missing Gregtech Maschines (Mixer, Chemical Bath, Chemical Rector Fluid Support, Distillery, Brewing Maschine, Assembler Fluid Support, Precision Laser Engraver, Forming Press, Packer, Unpacker, Separator, Polarizer, Fluid Heater, Distillation Tower, Slicer,Fluid Canner, Amplifabricator and Fusion Reactor)"
+        },
+        {
             "name": "ModTweaker",
             "version": "6.0",
             "url": "packs/BeyondReality/files/1710mods/2.1.8/ModTweaker-1.7.X-0.6-0.jar",
