@@ -107,3 +107,28 @@ mods.thaumcraft.Arcane.addShaped(
     [null, null, null]]
 );
 mods.thaumcraft.Research.refreshResearchRecipe("ICHORCLOTH_ARMOR");
+
+
+// Make Witching Gadgets wolven cloak harder to obtain (it provides speed+strength+resistance II, III then IV
+// when being repeatedly hit making the player near invulnerable against groups of regular mobs)
+
+val baseCloak = <ore:travelgearCloakBase>;
+val voidIngot = <ore:ingotVoidMetal>;
+val wolfPelt = <WitchingGadgets:item.WG_Material:6>;
+val metSteelRing = <ore:ringMeteoricSteel>;
+val strFlask = <Botania:brewFlask>.withTag({brewKey: "strength"});
+val resFlask = <Botania:brewFlask>.withTag({brewKey: "resistance"});
+val spdFlask = <Botania:brewFlask>.withTag({brewKey: "speed"});
+
+mods.thaumcraft.Arcane.removeRecipe(<WitchingGadgets:item.WG_Cloak:3>);
+mods.thaumcraft.Arcane.addShaped(
+   "CLOAK_WOLF", <WitchingGadgets:item.WG_Cloak:3>,
+   "perditio 100, terra 75, ignis 50",
+   [[metSteelRing, voidIngot, metSteelRing], 
+    [wolfPelt, baseCloak, wolfPelt],
+    [strFlask, resFlask, spdFlask]]
+);
+mods.thaumcraft.Research.refreshResearchRecipe("CLOAK_WOLF");
+
+
+
